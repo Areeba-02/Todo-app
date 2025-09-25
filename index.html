@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="wrap" role="main" aria-labelledby="app-title">
+    <section class="header-card" aria-hidden="false">
+      <div class="header-left">
+        <h1 id="app-title" class="title">Todo App</h1>
+        <p class="subtitle">Keep it up!</p>
+
+        <div class="progress-wrap" aria-hidden="false">
+          <div class="progress-bar" aria-hidden="true">
+            <div class="progress-fill" id="progressFill" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="counter" aria-live="polite" title="Completed / Total">
+        <div class="num" id="counterNum">0 / 0</div>
+        <div class="label">Done / Total</div>
+      </div>
+    </section>
+
+    <section aria-label="Add task">
+      <div class="input-row">
+        <input id="taskInput" class="input" type="text" placeholder="Write your task" aria-label="Write your task" />
+        <button id="addBtn" class="add-btn" aria-label="Add task">+</button>
+      </div>
+    </section>
+    <section class="list" id="todoList" aria-live="polite" aria-label="Todo list">
+      <!-- todo items injected here -->
+    </section>
+</main>
+    <script src="index.js"></script>
+</body>
+</html>
